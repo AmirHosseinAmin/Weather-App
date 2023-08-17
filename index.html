@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/Assets/Icons/icons8-full-moon-96.png">
+    <link rel="stylesheet" href="/index.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="main">
+      <video id="background-video" autoplay loop muted>
+        <source
+          src="/Assets/Backgrounds/thunderstrom.mp4"
+          type="video/mp4"
+          id="bg-vid"
+        />
+      </video>
+      <div class="sidebar">
+        <div class="search">
+          <input placeholder="Enter city name" spellcheck="false" id="search" />
+          <button id="myBtn">
+            <img src="/Assets/Icons/search.png" />
+          </button>
+        </div>
+        <div class="navigation">
+          <button>
+            <img src="/Assets/Icons/location.png" />
+          </button>
+        </div>
+        <div class="status">
+          <iframe
+            src="/Assets/Icons/drizzle-d.svg"
+            frameborder="0"
+            class="weather_icon"
+          ></iframe>
+        </div>
+        <div class="degreeText">
+          <span>12</span>
+        </div>
+        <div class="degreeIcon">
+          <iframe
+            class="temp-c"
+            src="/Assets/Icons/thermometer-celsius.svg"
+            frameborder="0"
+          ></iframe>
+        </div>
+        <div class="dayText">
+          <span>Monday,</span>
+        </div>
+        <div class="timeText">
+          <span>16:00</span>
+        </div>
+        <!-- <div class="ampm">
+                <span>PM</span>
+            </div> -->
+        <div class="break">
+          <p>&nbsp;</p>
+        </div>
+        <div class="cloudText">
+          <span>Mostly Cloudy</span>
+        </div>
+        <div class="tempMa">
+          <p>Max:</p>
+        </div>
+        <div class="maxTemp" id="maxTemp">
+          <p>20°C</p>
+        </div>
+        <div class="tempMi">
+          <p>Min:</p>
+        </div>
+        <div class="minTemp" id="minTemp">
+          <p>7°C</p>
+        </div>
+
+        <div class="cityName">
+          <div class="cityText">
+            <img src="/Assets/Icons/city.jpg" />
+            <span id="demo">New York, NY, USA</span>
+          </div>
+        </div>
+      </div>
+      <div class="info">
+        <div class="highlightText">
+          <span>Today's Highlights</span>
+        </div>
+        <div class="highlights">
+          <div class="hum">
+            <div class="humidity">
+              <p>Humidity</p>
+            </div>
+            <div class="humPre">
+              <p>12%</p>
+            </div>
+            <div class="humSt">
+              <p>No</p>
+            </div>
+            <div class="hum-icon">
+              <iframe src="/Assets/Icons/humidity.svg" frameborder="0"></iframe>
+            </div>
+          </div>
+          <div class="win">
+            <div class="wind">
+              <p>Wind status</p>
+            </div>
+            <div class="winSpeed">
+              <p>7</p>
+            </div>
+            <div class="winW">
+              <p>WSW</p>
+            </div>
+            <div class="win-icon">
+              <iframe src="/Assets/Icons/windsock.svg" frameborder="0"></iframe>
+            </div>
+          </div>
+          <div class="air">
+            <div class="airQuality">
+              <p>Air quality</p>
+            </div>
+            <div class="airMe">
+              <p>105</p>
+            </div>
+            <div class="airSt">
+              <p>Unhealthy</p>
+            </div>
+            <div class="air-icon">
+              <iframe
+                src="/Assets/Icons/smoke-particles.svg"
+                frameborder="0"
+              ></iframe>
+            </div>
+          </div>
+          <div class="vis">
+            <div class="visibility">
+              <p>Visibility</p>
+            </div>
+            <div class="visSpeed">
+              <p>5.2 Km</p>
+            </div>
+            <div class="visSt">
+              <p>Average</p>
+            </div>
+            <div class="vis-icon">
+              <iframe src="/Assets/Icons/vis.svg" frameborder="0"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="castTextOne">
+          <span>Today</span>
+        </div>
+        <div class="castTextTwo">
+          <span>Week</span>
+        </div>
+        <div class="cast">
+          <div class="mon">
+            <div class="monText">
+              <p>Mon</p>
+            </div>
+            <iframe src="" frameborder="0" class="weather_iconM"></iframe>
+            <div class="mdayD">
+              <p>12°/</p>
+            </div>
+            <div class="mnightD">
+              <p>12°</p>
+            </div>
+          </div>
+          <div class="tue">
+            <div class="tueText">
+              <p>Tue</p>
+            </div>
+            <iframe src="" frameborder="0" class="weather_iconT"></iframe>
+            <div class="tdayD">
+              <p>12°/</p>
+            </div>
+            <div class="tnightD">
+              <p>12°</p>
+            </div>
+          </div>
+          <div class="wed">
+            <div class="wedText">
+              <p>Wed</p>
+            </div>
+            <iframe src="" frameborder="0" class="weather_iconW"></iframe>
+            <div class="wdayD">
+              <p>12°/</p>
+            </div>
+            <div class="wnightD">
+              <p>12°</p>
+            </div>
+          </div>
+          <div class="thu">
+            <div class="thuText">
+              <p>Thu</p>
+            </div>
+            <iframe src="" frameborder="0" class="weather_iconTh"></iframe>
+            <div class="thdayD">
+              <p>12°/</p>
+            </div>
+            <div class="thnightD">
+              <p>12°</p>
+            </div>
+          </div>
+          <div class="fri">
+            <div class="friText">
+              <p>Fri</p>
+            </div>
+            <iframe src="" frameborder="0" class="weather_iconF"></iframe>
+            <div class="fdayD">
+              <p>12°/</p>
+            </div>
+            <div class="fnightD">
+              <p>12°</p>
+            </div>
+          </div>
+          <div class="sat">
+            <div class="satText">
+              <p>Sat</p>
+            </div>
+            <iframe src="" frameborder="0" class="weather_iconSa"></iframe>
+            <div class="sadayD">
+              <p>12°/</p>
+            </div>
+            <div class="sanightD">
+              <p>12°</p>
+            </div>
+          </div>
+          <div class="sun">
+            <div class="sunText">
+              <p>Sun</p>
+            </div>
+            <iframe src="" frameborder="0" class="weather_iconS"></iframe>
+            <div class="sudayD">
+              <p>12°/</p>
+            </div>
+            <div class="sunightD">
+              <p>12°</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="preloader">
+      <div class="banter-loader">
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+        <div class="banter-loader__box"></div>
+      </div>
+    </div>
+    <div class="invalidCity">
+      <p>Invalid City Name!</p>
+    </div>
+    <div class="searCity">
+      <div class="searchCity">
+        <input placeholder="Enter city name" spellcheck="false" id="searchCity" />
+        <button id="myBtnC">
+          <img src="/Assets/Icons/search.png" />
+        </button>
+      </div>
+      <div class="error">
+        <p id="err">here</p>
+      </div>
+    </div>
+   
+
+    <script src="/index.js"></script>
+  </body>
+</html>
